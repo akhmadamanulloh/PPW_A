@@ -404,126 +404,32 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ConnectionRefusedError</span><span class="g g-Whitespace">                    </span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">_new_conn</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>             <span class="n">sock</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">create_connection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span>                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dns_host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>				Jakarta (ANTARA) - Ketua Partai Solidaritas Indonesia (PSI) Kaesang Pangarep mengatakan bahwa partainya tidak ingin ikut campur terkait urusan kakaknya yang sekaligus bakal calon wakil presiden dari Koalisi Indonesia Maju Gibran Rakabuming Raka di partainya.
+Kaesang menanggapi pernyataan dari Ketua Bidang Kehormatan DPP PDIP Komarudin Watubun yang mengatakan bila partainya memecat Gibran Rakabuming Raka usai menjadi bacawapres dari Prabowo Subianto akan muncul narasi dizalimi.
+&quot;Ya balik lagi itu saya kembalikan lagi, itu urusan dapur partai lain, PSI tidak ikut campur tentang itu,&quot; kata Kaesang di Kantor DPP PSI, Jakarta Pusat, Rabu.
+Namun, Kaesang siap menerima Gibran ke partainya bila Wali Kota Solo, Jawa Tengah, tersebut sudah tidak lagi menjadi kader PDIP.
+&quot;Oh iya terbuka sekali kan berkali-kali bilang kalau masuk ke sini sangat terbuka,&quot; ujar Kaesang.
+Baca juga: Forum Komunikasi Santri Indonesia resmi gabung PSI
+Baca juga: Ketum PSI kunjungi UMKM dan pengrajin sasando di Kupang
+ 
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">85</span>             <span class="k">raise</span> <span class="n">err</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>         <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span>                 <span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">source_address</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">73</span>             <span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span>             <span class="c1"># Break explicitly a reference cycle</span>
-
-<span class="ne">ConnectionRefusedError</span>: [Errno 111] Connection refused
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">NewConnectionError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span>             <span class="c1"># Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">791</span>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span>                 <span class="n">conn</span><span class="p">,</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span>                 <span class="n">new_e</span> <span class="o">=</span> <span class="n">_wrap_proxy_error</span><span class="p">(</span><span class="n">new_e</span><span class="p">,</span> <span class="n">conn</span><span class="o">.</span><span class="n">proxy</span><span class="o">.</span><span class="n">scheme</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">492</span>             <span class="k">raise</span> <span class="n">new_e</span>
-<span class="g g-Whitespace">    </span><span class="mi">493</span> 
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">467</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">468</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_validate_conn</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span>             <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1096</span>         <span class="k">if</span> <span class="n">conn</span><span class="o">.</span><span class="n">is_closed</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1097</span>             <span class="n">conn</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1098</span> 
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">610</span>         <span class="n">sock</span><span class="p">:</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span> <span class="o">|</span> <span class="n">ssl</span><span class="o">.</span><span class="n">SSLSocket</span>
-<span class="ne">--&gt; </span><span class="mi">611</span>         <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_conn</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span>         <span class="n">server_hostname</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">_new_conn</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span>         <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">218</span>             <span class="k">raise</span> <span class="n">NewConnectionError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span>                 <span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Failed to establish a new connection: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span>
-
-<span class="ne">NewConnectionError</span>: &lt;urllib3.connection.HTTPSConnection object at 0x7da6b1762e60&gt;: Failed to establish a new connection: [Errno 111] Connection refused
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">MaxRetryError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">486</span>             <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">487</span>                 <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">844</span> 
-<span class="ne">--&gt; </span><span class="mi">845</span>             <span class="n">retries</span> <span class="o">=</span> <span class="n">retries</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">846</span>                 <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">new_e</span><span class="p">,</span> <span class="n">_pool</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/util/retry.py</span> in <span class="ni">increment</span><span class="nt">(self, method, url, response, error, _pool, _stacktrace)</span>
-<span class="g g-Whitespace">    </span><span class="mi">514</span>             <span class="n">reason</span> <span class="o">=</span> <span class="n">error</span> <span class="ow">or</span> <span class="n">ResponseError</span><span class="p">(</span><span class="n">cause</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">515</span>             <span class="k">raise</span> <span class="n">MaxRetryError</span><span class="p">(</span><span class="n">_pool</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">reason</span>  <span class="c1"># type: ignore[arg-type]</span>
-<span class="g g-Whitespace">    </span><span class="mi">516</span> 
-
-<span class="ne">MaxRetryError</span>: HTTPSConnectionPool(host=&#39;www.antaranews.com&#39;, port=443): Max retries exceeded with url: /berita/3803331/kaesang-psi-tidak-ingin-ikut-campur-urusan-gibran-dengan-pdip (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPSConnection object at 0x7da6b1762e60&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ConnectionError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-1-e5ea5becb547&gt;</span> in <span class="ni">&lt;cell line: 7&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Unduh konten halaman web berita</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.antaranews.com/berita/3803331/kaesang-psi-tidak-ingin-ikut-campur-urusan-gibran-dengan-pdip&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">html</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span><span class="s2"> </span>
-<span class="ne">---&gt; </span><span class="mi">73</span><span class="s2">     return request(&quot;get&quot;, url, params=params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="s2"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="s2"> </span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="s2">     # cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="s2">     with sessions.Session() as session:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span><span class="s2">         return session.request(method=method, url=url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="s2"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="s2"> </span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span><span class="s2">         }</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span><span class="s2">         send_kwargs.update(settings)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span><span class="s2">         resp = self.send(prep, **send_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span><span class="s2">         return resp</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="s2">         # Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span><span class="s2">         r = adapter.send(request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="s2">         # Total elapsed time of the request (approximately)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">517</span><span class="s2">                 raise SSLError(e, request=request)</span>
-<span class="g g-Whitespace">    </span><span class="mi">518</span><span class="s2"> </span>
-<span class="ne">--&gt; </span><span class="mi">519</span><span class="s2">             raise ConnectionError(e, request=request)</span>
-<span class="g g-Whitespace">    </span><span class="mi">520</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">521</span><span class="s2">         except ClosedPoolError as e:</span>
-
-<span class="ne">ConnectionError</span>: HTTPSConnectionPool(host=&#39;www.antaranews.com&#39;, port=443): Max retries exceeded with url: /berita/3803331/kaesang-psi-tidak-ingin-ikut-campur-urusan-gibran-dengan-pdip (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPSConnection object at 0x7da6b1762e60&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
+Pada Senin (30/10), Gibran sendiri mengaku sudah mendapatkan izin dari Ketua DPP PDIP Puan Maharani untuk ikut berkompetisi pada Pemilihan Presiden 2024.
+&quot;Teman-teman media kan saya sudah berkali-kali bilang.
+Kira-kira dua minggu lalu saya sudah ketemu Mbak Puan dan Pak Arsjad (Ketua Tim Pemenangan Nasional Ganjar Pranowo di Pilpres 2024 Arsjad Rasjid, Red.
+),&quot; katanya di Solo, Jawa Tengah.
+Pada pertemuan tersebut, ia mengaku sudah mendapatkan izin dari keduanya untuk mengikuti kontestasi pemilu tahun depan.
+&quot;Beliau berdua sudah memberi saya izin untuk ikut berkompetisi.
+Nggak perlu saya ulang-ulang lagi,&quot; katanya.
+Terkait keanggotaannya di PDIP yang dipermasalahkan sejumlah pihak, termasuk Ketua Dewan Pimpinan Cabang (DPC) PDIP Kota Surakarta FX Hadi Rudyatmo, dikatakannya, dalam waktu dekat ini ia akan bertemu dengan yang bersangkutan.
+&quot;Beliau sudah WA saya, nanti ya saya carikan jadwal.
+Biar tidak saling tumpang tindih jadwalnya,&quot; katanya.
+Termasuk mengenai permintaan dari sejumlah kader PDIP yang meminta Gibran mengembalikan kartu tanda anggota (KTA), ia akan membahasnya dengan FX Rudy.Pewarta: Hendri Sukma IndrawanEditor: Herry Soebanto				COPYRIGHT © ANTARA 2023
 </pre></div>
 </div>
 </div>
@@ -1083,7 +989,7 @@ Cosine Similarity antara Kalimat 15 dan Kalimat 16: 0.0000
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0f86119a-7372-41e0-9015-1c43ea18f3f8" class="colab-df-container">
+  <div id="df-b08b97ec-2a98-4db7-b9af-17e5e4ec8d81" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1429,17 +1335,17 @@ Cosine Similarity antara Kalimat 15 dan Kalimat 16: 0.0000
 </table>
 </div>
     <div class="colab-df-buttons">
-
+      
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-0f86119a-7372-41e0-9015-1c43ea18f3f8')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b08b97ec-2a98-4db7-b9af-17e5e4ec8d81')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
-
+      
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
     <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
   </svg>
     </button>
-
+    
   <style>
     .colab-df-container {
       display:flex;
@@ -1483,12 +1389,12 @@ Cosine Similarity antara Kalimat 15 dan Kalimat 16: 0.0000
 
     <script>
       const buttonEl =
-        document.querySelector('#df-0f86119a-7372-41e0-9015-1c43ea18f3f8 button.colab-df-convert');
+        document.querySelector('#df-b08b97ec-2a98-4db7-b9af-17e5e4ec8d81 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-0f86119a-7372-41e0-9015-1c43ea18f3f8');
+        const element = document.querySelector('#df-b08b97ec-2a98-4db7-b9af-17e5e4ec8d81');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1506,137 +1412,10 @@ Cosine Similarity antara Kalimat 15 dan Kalimat 16: 0.0000
       }
     </script>
   </div>
-
-
-<div id="df-4dbd7814-2053-4dbb-bc43-5ec2fd9d3d2d">
-  <button class="colab-df-quickchart" onclick="quickchart('df-4dbd7814-2053-4dbb-bc43-5ec2fd9d3d2d')"
-            title="Suggest charts."
-            style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-     width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-    </g>
-</svg>
-  </button>
-
-<style>
-  .colab-df-quickchart {
-      --bg-color: #E8F0FE;
-      --fill-color: #1967D2;
-      --hover-bg-color: #E2EBFA;
-      --hover-fill-color: #174EA6;
-      --disabled-fill-color: #AAA;
-      --disabled-bg-color: #DDD;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-      --bg-color: #3B4455;
-      --fill-color: #D2E3FC;
-      --hover-bg-color: #434B5C;
-      --hover-fill-color: #FFFFFF;
-      --disabled-bg-color: #3B4455;
-      --disabled-fill-color: #666;
-  }
-
-  .colab-df-quickchart {
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: var(--fill-color);
-    height: 32px;
-    padding: 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: var(--hover-bg-color);
-    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: var(--button-hover-fill-color);
-  }
-
-  .colab-df-quickchart-complete:disabled,
-  .colab-df-quickchart-complete:disabled:hover {
-    background-color: var(--disabled-bg-color);
-    fill: var(--disabled-fill-color);
-    box-shadow: none;
-  }
-
-  .colab-df-spinner {
-    border: 2px solid var(--fill-color);
-    border-color: transparent;
-    border-bottom-color: var(--fill-color);
-    animation:
-      spin 1s steps(1) infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-      border-left-color: var(--fill-color);
-    }
-    20% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    30% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-      border-right-color: var(--fill-color);
-    }
-    40% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    60% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-    }
-    80% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-bottom-color: var(--fill-color);
-    }
-    90% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-    }
-  }
-</style>
-
-  <script>
-    async function quickchart(key) {
-      const quickchartButtonEl =
-        document.querySelector('#' + key + ' button');
-      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
-      quickchartButtonEl.classList.add('colab-df-spinner');
-      try {
-        const charts = await google.colab.kernel.invokeFunction(
-            'suggestCharts', [key], {});
-      } catch (error) {
-        console.error('Error during call to suggestCharts:', error);
-      }
-      quickchartButtonEl.classList.remove('colab-df-spinner');
-      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
-    }
-    (() => {
-      let quickchartButtonEl =
-        document.querySelector('#df-4dbd7814-2053-4dbb-bc43-5ec2fd9d3d2d button');
-      quickchartButtonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-    })();
-  </script>
-</div>
+  
     </div>
   </div>
-</div></div>
+  </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1771,7 +1550,7 @@ Closeness Centrality of Termasuk mengenai permintaan dari sejumlah kader PDIP ya
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2dd6bdea06b8a871f049fd936341381bee429488fa1632555efb83a5c4e687c2.png" src="_images/2dd6bdea06b8a871f049fd936341381bee429488fa1632555efb83a5c4e687c2.png" />
+<img alt="_images/753bf3765be334d0e4d9592860f300864df3c965e60e8f2b630b47ce1792f98b.png" src="_images/753bf3765be334d0e4d9592860f300864df3c965e60e8f2b630b47ce1792f98b.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Closeness Centrality:
 Node 0: 0.8333
 Node 1: 0.7143
